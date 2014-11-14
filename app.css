@@ -1,5 +1,10 @@
-.story {
-	border: solid 1px #999;
-	background-color: #ccc;
+.content h2 {
+	margin-left: -16px;
+}
+.callout {
+	padding: 20px;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
 	cursor: pointer;
 }
