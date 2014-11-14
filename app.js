@@ -60,35 +60,35 @@ myModule.factory('angelloModel', function($rootScope) {
     };
 });
 
-myModule.controller('MainCtrl', function($scope, angelloModel, angelloHelper) {
-    $scope.currentStory;
-    
-    $scope.types = angelloModel.getTypes();
-    $scope.statuses = angelloModel.getStatuses();
-    $scope.stories = angelloModel.getStories();
-    $scope.typesIndex = angelloHelper.buildIndex($scope.types, 'name');
-    $scope.statusesIndex = angelloHelper.buildIndex($scope.statuses, 'name');
+myModule.controller('MainCtrl', function(angelloModel, angelloHelper) {
+    var main = this;
 
-    $scope.setCurrentStory = function(story) {
-        $scope.currentStory = story;
+    main.types = angelloModel.getTypes();
+    main.statuses = angelloModel.getStatuses();
+    main.stories = angelloModel.getStories();
+    main.typesIndex = angelloHelper.buildIndex(main.types, 'name');
+    main.statusesIndex = angelloHelper.buildIndex(main.statuses, 'name');
 
-        $scope.currentStatus = $scope.statusesIndex[story.status];
-        $scope.currentType = $scope.typesIndex[story.type];
+    main.setCurrentStory = function(story) {
+        main.currentStory = story;
+
+        main.currentStatus = main.statusesIndex[story.status];
+        main.currentType = main.typesIndex[story.type];
     };
 
-    $scope.createStory = function() {
-        $scope.stories.push({title:'New Story', description:'Description pending.', criteria:'Criteria pending.', status:'Back Log', type:'Feature', reporter:'Pending', assignee:'Pending'});
+    main.createStory = function() {
+        main.stories.push({title:'New Story', description:'Description pending.', criteria:'Criteria pending.', status:'Back Log', type:'Feature', reporter:'Pending', assignee:'Pending'});
     };
 
-    $scope.setCurrentStatus = function(status) {
-        if(typeof $scope.currentStory !== 'undefined') {
-            $scope.currentStory.status = status.name;
+    main.setCurrentStatus = function(status) {
+        if(typeof main.currentStory !== 'undefined') {
+            main.currentStory.status = status.name;
         }
     };
 
-    $scope.setCurrentType = function(type) {
-        if(typeof $scope.currentStory !== 'undefined') {
-            $scope.currentStory.type = type.name;
+    main.setCurrentType = function(type) {
+        if(typeof main.currentStory !== 'undefined') {
+            main.currentStory.type = type.name;
         }
     };
 });
