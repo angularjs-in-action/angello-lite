@@ -1,6 +1,6 @@
 var myModule = angular.module('Angello', []);
 
-myModule.factory('angelloHelper', function($rootScope) {
+myModule.factory('angelloHelper', function() {
     var buildIndex = function(source, property) {
         var tempArray = [];
 
@@ -16,7 +16,7 @@ myModule.factory('angelloHelper', function($rootScope) {
     };
 });
 
-myModule.factory('angelloModel', function($rootScope) {
+myModule.factory('angelloModel', function() {
     var getStatuses = function() {
         var tempArray = [
             {name:'Back Log'},
