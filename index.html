@@ -33,13 +33,13 @@
 				<div class="control-group">
 					<label class="control-label" for="inputStatus">Status</label>
 					<div class="controls">
-						<select id="inputStatus" ng-model="main.currentStatus" ng-options="l.name for l in main.statuses" ng-change="main.setCurrentStatus(currentStatus)"></select>
+						<select id="inputStatus" ng-model="main.currentStatus" ng-options="l.name for l in main.statuses" ng-change="main.setCurrentStatus(main.currentStatus)"></select>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label" for="inputType">Type</label>
 					<div class="controls">
-						<select id="inputType" ng-model="main.currentType" ng-options="t.name for t in main.types" ng-change="main.setCurrentType(currentType)"></select>
+						<select id="inputType" ng-model="main.currentType" ng-options="t.name for t in main.types" ng-change="main.setCurrentType(main.currentType)"></select>
 					</div>
 				</div>					
 				<div class="control-group">
