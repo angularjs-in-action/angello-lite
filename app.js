@@ -34,12 +34,9 @@ myModule.service('AngelloModel', function () {
             {name: 'Spike'}
         ],
         stories = [
-            {title: 'Story 00', description: 'Description pending.', criteria: 'Criteria pending.', status: 'To Do', type: 'Feature', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'},
-            {title: 'Story 01', description: 'Description pending.', criteria: 'Criteria pending.', status: 'Back Log', type: 'Feature', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'},
-            {title: 'Story 02', description: 'Description pending.', criteria: 'Criteria pending.', status: 'Code Review', type: 'Enhancement', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'},
-            {title: 'Story 03', description: 'Description pending.', criteria: 'Criteria pending.', status: 'Done', type: 'Enhancement', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'},
-            {title: 'Story 04', description: 'Description pending.', criteria: 'Criteria pending.', status: 'Verified', type: 'Bug', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'},
-            {title: 'Story 05', description: 'Description pending.', criteria: 'Criteria pending.', status: 'To Do', type: 'Spike', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'}
+            {title: 'First story', description: 'Our first story.', criteria: 'Criteria pending.', status: 'To Do', type: 'Feature', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'},
+            {title: 'Second story', description: 'Do something.', criteria: 'Criteria pending.', status: 'Back Log', type: 'Feature', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'},
+            {title: 'Another story', description: 'Just one more.', criteria: 'Criteria pending.', status: 'Code Review', type: 'Enhancement', reporter: 'Lukas Ruebbelke', assignee: 'Brian Ford'}
         ];
 
     service.getStatuses = function () {
