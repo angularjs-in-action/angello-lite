@@ -14,9 +14,14 @@
 		<div ng-controller="MainCtrl as main">
 			<div class="col-md-4">
 				<h2>Stories</h2>
-				<story class="callout" ng-repeat="story in main.stories" ng-click="main.setCurrentStory(story)"></story>
+				<story class="callout"
+                   ng-repeat="story in main.stories"
+                   ng-click="main.setCurrentStory(story)">
+                </story>
 				<br />
-				<a class="btn btn-primary" ng-click="main.createStory()"><i class="glyphicon glyphicon-plus"></i></a>
+				<a class="btn btn-primary" ng-click="main.createStory()">
+                    <i class="glyphicon glyphicon-plus"></i>
+                </a>
 			</div>
 			<div class="col-md-6 content">
 				<h2>Story</h2>
