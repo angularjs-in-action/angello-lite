@@ -1,6 +1,6 @@
 var myModule = angular.module('Angello', []);
 
-myModule.factory('AngelloHelper', function () {
+myModule.factory('AngelloHelper', function() {
     var buildIndex = function (source, property) {
         var tempArray = [];
 
@@ -16,7 +16,7 @@ myModule.factory('AngelloHelper', function () {
     };
 });
 
-myModule.service('AngelloModel', function () {
+myModule.service('AngelloModel', function() {
     var service = this,
         statuses = [
             {name: 'Back Log'},
@@ -76,7 +76,7 @@ myModule.service('AngelloModel', function () {
     };
 });
 
-myModule.controller('MainCtrl', function (AngelloModel, AngelloHelper) {
+myModule.controller('MainCtrl', function(AngelloModel, AngelloHelper) {
     var main = this;
 
     main.types = AngelloModel.getTypes();
@@ -91,7 +91,7 @@ myModule.controller('MainCtrl', function (AngelloModel, AngelloHelper) {
         main.currentType = main.typesIndex[story.type];
     };
 
-    main.createStory = function () {
+    main.createStory = function() {
         main.stories.push({
             title: 'New Story',
             description: 'Description pending.',
@@ -116,7 +116,7 @@ myModule.controller('MainCtrl', function (AngelloModel, AngelloHelper) {
     };
 });
 
-myModule.directive('story', function () {
+myModule.directive('story', function() {
     return {
         scope: true,
         replace: true,
