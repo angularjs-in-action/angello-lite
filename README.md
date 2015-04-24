@@ -10,7 +10,7 @@ You'll need [`git`](http://git-scm.com/) and a web browser.
 Run the following command to check out a local copy of the code.
 
 ```shell
-git clone git@github.com:angularjs-in-action/angello-lite.git
+git clone https://github.com/angularjs-in-action/angello-lite.git
 ```
 
 
